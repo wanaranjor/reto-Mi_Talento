@@ -14,7 +14,7 @@
     "export": "run-s build:css build:export",
     "start": "pm2 start ecosystem.config.js --env production",
     "stop": "pm2 stop ecosystem.config.js --env production",
-    "serve": "serve __sapper__/export"
+    "serve": "serve __sapper__/build"
   },
   "dependencies": {
     "axios": "^0.21.1",
