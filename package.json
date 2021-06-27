@@ -1,12 +1,12 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "reto-mi-talento",
+  "description": "reto-mi-talento",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "dev": "sapper dev",
-    "watch:tailwind": "postcss static/tailwind.css -o static/global.css -w",
-    "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/global.css",
+    "watch:tailwind": "postcss static/global.css -o static/global.css -w",
+    "build:tailwind": "NODE_ENV=production postcss static/global.css -o static/global.css",
     "build": "yarn build:tailwind && sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build"
