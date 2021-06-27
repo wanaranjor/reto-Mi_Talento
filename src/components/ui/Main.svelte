@@ -1,5 +1,4 @@
 <script>
-  import Circle from "./Circle.svelte";
   import FormSensor from "./FormSensor.svelte";
   import SensorChart from "./SensorChart.svelte";
 
@@ -20,8 +19,7 @@
 
 <div class="flex flex-col w-full">
   <FormSensor on:sensor={handleInfoSensor} on:noViewChart={handleNoViewChart} />
-  <div class="grid grid-cols-2 p-10 ">
-    <Circle />
+  <div class="grid grid-cols-1 p-10 ">
     {#if view && sensorId != null && sensorInfo != null}
       <SensorChart {sensorId} {sensorInfo} />
     {/if}

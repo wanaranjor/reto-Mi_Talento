@@ -1,5 +1,7 @@
 import axios from "axios";
 import Chart from 'chart.js/auto';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
 const API_URL = process.env.API_URL;
 
 export const createHeaders = () => {
@@ -26,6 +28,7 @@ export const getSensorById = async (id) => {
     const headers = createHeaders();
     const url = `${API_URL}/${id}`;
     const { data } = await axios.get(url, { headers });
+    console.log(data)
     return data;
   } catch (error) {
     console.error('getSensorById: Error', error.response.status);
@@ -35,9 +38,10 @@ export const getSensorById = async (id) => {
 
 export const chartSensor = (sensorId, sensorInfo) => {
   const ctx = document.getElementById('SensorChart');
-  const labels = sensorInfo.map(item => item.type);
+  const labels = sensorInfo.map(item => `${item.type} - ${item.time}`);
   const data = sensorInfo.map(item => item.magto);
   new Chart(ctx, {
+    plugins: [ChartDataLabels],
     type: 'bar',
     data: {
       labels: labels,

@@ -28,7 +28,7 @@
       sensorInfo = null;
     } else {
       notifier.danger(
-        `Error ${sensorInfo}: ${STATUS_ERROR[sensorInfo]} `,
+        `Error ${sensorInfo}: ${STATUS_ERROR[sensorInfo]} - No existe información para este Sensor.`,
         3000
       );
     }
