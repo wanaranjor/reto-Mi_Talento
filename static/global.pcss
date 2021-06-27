@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+   @font-face {
+    font-family: plexsans-regular;
+    font-weight: 400;
+    src: url(/fonts/IBMPlexSans-Regular.ttf) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: russoone-regular;
+    font-weight: 400;
+    src: url(/fonts/RussoOne-Regular.ttf) format("woff");
+    font-display: swap;
+  }
+}
+
+@layer components {
+  .input-form {
+    @apply w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-200 border border-yellow-600  rounded-l-lg outline-none focus:border-gray-300 focus:ring-1 focus:ring-white;
+  }
+  .input-no-border {
+    @apply w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-white border border-white rounded outline-none focus:border-white focus:ring-0 focus:ring-white;
+  }
+  .input-select {
+  @apply w-full text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none focus:border-yellow-200 focus:ring-2 focus:ring-yellow-300;
+  }
+  .label-form {
+    @apply block font-normal text-sm md:text-base text-gray-700;
+  }
+  .btn {
+    @apply px-4 py-2 font-bold text-white bg-gradient-to-t from-yellow-400 via-yellow-600 to-yellow-800 hover:bg-yellow-300 focus:outline-none focus:ring transition duration-300 focus:ring-yellow-500 focus:ring-opacity-50 rounded-r-lg;
+  }
+  .btn-no {
+    @apply px-4 py-2 font-bold text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring rounded;
+  }
+  .btn-ok {
+    @apply px-4 py-2 font-bold text-white bg-blue-700 hover:bg-gray-500 focus:outline-none focus:ring rounded-md;
+  }
+  .btn-form {
+    @apply block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transform bg-gradient-to-r from-blue-700 hover:from-blue-600 to-blue-600 hover:to-blue-700 focus:ring focus:outline-none;
+  }
+  .icon-link{
+    @apply relative inline-flex items-center justify-center flex-shrink-0 w-7 h-7 text-white rounded-full
+  }
+}
+
+.text-yellow-950 {
+  color: #f3d430;
+}
+
+.bg-yellow-950 {
+  background-color: #f3d430;
+}
+
+.border-yellow-950 {
+  border-color: #f3d430;
+}
