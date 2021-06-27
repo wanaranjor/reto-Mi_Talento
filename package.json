@@ -9,7 +9,7 @@
     "build:tailwind": "NODE_ENV=production postcss static/global.css -o static/global.css",
     "build": "yarn build:tailwind && sapper build --legacy",
     "export": "sapper export --legacy",
-    "start": "node __sapper__/export"
+    "start": "node __sapper__/build"
   },
   "dependencies": {
     "axios": "^0.21.1",
